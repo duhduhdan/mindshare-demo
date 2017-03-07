@@ -2,16 +2,16 @@ import React, { PropTypes } from 'react'
 
 import './RowItem.css'
 
-import Ball from '../Ball/Ball'
 import Score from '../Score/Score'
+import RowItemBall from '../RowItemBalls/RowItemBall'
 
-const RowItem = ({ index, ...props }) => (
+const RowItem = ({ index, activeColor }) => (
   <li className="row-item" key={index}>
     <span className="item-number">{index}</span>
-    <Ball {...props} />
-    <Ball {...props} />
-    <Ball {...props} />
-    <Ball {...props} />
+    <RowItemBall rowIndex={index} />
+    <RowItemBall rowIndex={index} />
+    <RowItemBall rowIndex={index} />
+    <RowItemBall rowIndex={index} />
     <Score />
   </li>
 )

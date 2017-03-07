@@ -17,8 +17,8 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
-    console.log('hi');
+  handleClick(e) {
+    console.log('hi', e.currentTarget);
   }
 
   renderRows() {
@@ -29,8 +29,6 @@ class App extends Component {
         <RowItem
           index={i + 1}
           key={i}
-          active
-          color={this.state.activeColor}
           onClick={this.handleClick}
         />
       )
