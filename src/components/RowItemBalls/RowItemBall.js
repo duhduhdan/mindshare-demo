@@ -13,9 +13,11 @@ class RowItemBall extends React.Component {
 
   onClick() {
     const { activeColor, activeRowIndex, rowIndex } = this.props
+
     if (rowIndex !== activeRowIndex) {
       return
     }
+
     this.setState({color: activeColor})
   }
 

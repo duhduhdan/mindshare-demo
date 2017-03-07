@@ -5,7 +5,6 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createLogger from 'redux-logger'
 
-
 import RowItem from './components/RowItem/RowItem'
 import ControlPanel from './components/ControlPanel/ControlPanel'
 
