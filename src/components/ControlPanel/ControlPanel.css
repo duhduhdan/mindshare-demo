@@ -1,0 +1,9 @@
+.choose-colors {
+  width: 100px;
+  margin-bottom: 40px;
+}
+
+.choose-colors span {
+  margin: 2px;
+  display: inline-block;
+}

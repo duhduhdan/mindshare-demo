@@ -1,0 +1,56 @@
+.ball {
+  display: block;
+  border-radius: 50%;
+  height: 21px;
+  width: 21px;
+}
+
+.inactive {
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.magenta {
+  background-color: magenta;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.white {
+  background-color: #eee;
+  width: 12px;
+  height: 12px;
+}
+
+.black {
+  background-color: #222;
+  width: 12px;
+  height: 12px;
+}

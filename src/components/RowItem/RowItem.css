@@ -1,0 +1,19 @@
+.row-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-top: 1px solid #666;
+}
+
+.row-item span {
+  margin: 0 6px;
+}
+
+.item-number {
+  width: 30px;
+}
+
+.row-content {
+
+}
