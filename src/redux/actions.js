@@ -1,6 +1,7 @@
-export const SET_ACTIVE_COLOR = "SET_ACTIVE_COLOR"
-export const UPDATE_SCORE = "UPDATE_SCORE"
-export const UPDATE_ACTIVE_ROW = "UPDATE_ACTIVE_ROW"
+export const SET_ACTIVE_COLOR = 'SET_ACTIVE_COLOR'
+export const UPDATE_SCORE = 'UPDATE_SCORE'
+export const INCREMENT_ACTIVE_ROW = 'INCREMENT_ACTIVE_ROW'
+export const DID_WIN = 'DID_WIN'
 
 // Action creators
 export function selectActiveColor(color) {
@@ -17,9 +18,14 @@ export function updateScore(score) {
   }
 }
 
-export function updateActiveRow(index) {
+export function incrementActiveRow() {
   return {
-    type: UPDATE_ACTIVE_ROW,
-    index
+    type: INCREMENT_ACTIVE_ROW
+  }
+}
+
+export function didWin() {
+  return {
+    type: DID_WIN
   }
 }

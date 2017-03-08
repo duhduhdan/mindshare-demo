@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-
 import Ball from '../Ball/Ball'
 
 import './Score.css'
@@ -20,12 +19,6 @@ function determineColor(score) {
 }
 
 const Score = ({ score }) => {
-  // mock the props
-  score = {
-    white: 1,
-    black: 2
-  }
-
   if (!score) {
     return (
       <div className="empty-score">
