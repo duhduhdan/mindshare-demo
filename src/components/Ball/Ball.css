@@ -6,9 +6,8 @@
 }
 
 .inactive {
-  height: 12px;
-  width: 12px;
-  background-color: #eee;
+  box-sizing: border-box;
+  border: 1px solid #aaa;
 }
 
 .red {

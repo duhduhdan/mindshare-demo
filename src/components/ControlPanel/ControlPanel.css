@@ -1,6 +1,16 @@
+.control-panel {
+  text-align: center;
+}
+
+.title {
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
 .choose-colors {
   width: 100px;
-  margin-bottom: 40px;
+  margin: 15px auto;
 }
 
 .choose-colors span {

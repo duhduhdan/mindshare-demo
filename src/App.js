@@ -1,52 +1,34 @@
-import React, { Component } from 'react'
-import './App.css'
-import activeColor from './redux/reducer'
+import React from 'react'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createLogger from 'redux-logger'
 
-import RowItem from './components/RowItem/RowItem'
+import './App.css'
+import activeColor from './redux/reducer'
+
+import Row from './components/Row/Row'
 import ControlPanel from './components/ControlPanel/ControlPanel'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+function renderRows() {
+  let rows = []
 
-    this.state = {activeColor: 'red'}
-    this.handleClick = this.handleClick.bind(this)
+  for (let i = 0; i < 10; i++) {
+    rows.push(<Row index={i + 1} key={i} />)
   }
 
-  handleClick(e) {
-    console.log('hi', e.currentTarget);
-  }
-
-  renderRows() {
-    let rows = []
-
-    for (let i = 0; i < 10; i++) {
-      rows.push(
-        <RowItem
-          index={i + 1}
-          key={i}
-          onClick={this.handleClick}
-        />
-      )
-    }
-
-    return rows
-  }
-
-  render() {
-    const logger = createLogger()
-    return (
-      <Provider store={createStore(activeColor, applyMiddleware(logger))}>
-        <section>
-          <ControlPanel />
-          {this.renderRows()}
-        </section>
-      </Provider>
-    )
-  }
+  return rows
 }
+
+const logger = createLogger()
+
+const App = () => (
+  <Provider store={createStore(activeColor, applyMiddleware(logger))}>
+    <section className="mindshare">
+      <h1>Mastermind</h1>
+      <ControlPanel />
+      {renderRows()}
+    </section>
+  </Provider>
+)
 
 export default App
